@@ -1,3 +1,16 @@
+/** Environment Configurations **/
+
+const dotenv = require('dotenv');
+const joi = require('joi');
+
+dotenv.config();
+
+const envVarsSchema = joi.object().keys({
+  PORT: joi.string().required(),
+  NODE_ENV: joi.string().valid('development').required(),
+  POSTGRES_URL: joi.string().required(),
+}).unknown();
+
 const {value: envVars, error } = envVarsSchema.prefs({errors: {label: 'key'}}).validate(process.env);
 
 if (error) {
