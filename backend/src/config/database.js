@@ -1,7 +1,7 @@
 /** Database Configurations **/
 
 const { Pool } = require('pg');
-const config = require('../config/config');
+const config = require('./config');
 
 // To connect to local db
 const pool = new Pool({
