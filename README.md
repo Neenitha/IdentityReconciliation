@@ -16,3 +16,7 @@ Copy .env file to src folder
 cd backend/src
 npm install
 npm start
+
+
+###Render Endpoint
+https://identityreconciliation-hz47.onrender.com/identity
